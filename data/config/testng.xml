@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+     <!--    mvn clean test -DsuiteXmlFile="data/config/testng.xml"   -->
+
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="WebDriverListener"></listener>
+        <listener class-name="Utilities.ExtentListner.ExtentListnerClass"></listener>
+
+    </listeners>
+
+    <test verbose="2" preserve-order="true" name="Command Line Tests"  junit="true">
+        <classes>
+             <class name="bookCartTest"></class>
+              <class name="bookcartloginviaPortal"></class>
+        </classes>
+    </test>
+
+</suite>
